@@ -8,16 +8,17 @@ import {
 } from "react-router-dom";
 
 import Main from './pages/Main';
-import SignUp from './pages/SignUp';
-import Menu from './components/Menu';
+import SignIn from './pages/SignIn';
+import Layout from './components/Layout';
 
 render(
   <BrowserRouter>
-    <Menu />
-    <Routes>
-      <Route path='/' element={<Main />} />
-      <Route path='/SignUp' element={<SignUp />} />
-    </Routes>
+    <Layout>
+      <Routes>
+        <Route path='/' element={<Main />} />
+        <Route path='/SignIn' element={<SignIn />} />
+      </Routes>
+    </Layout>
   </BrowserRouter>,
   document.getElementById('root')
 );
