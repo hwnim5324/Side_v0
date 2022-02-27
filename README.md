@@ -1,2 +1,2 @@
-# Side project for studying React.js
+# NoName project for studying React.js
 
