@@ -1,0 +1,107 @@
+.blind{
+    display: none;
+}
+
+.signin{
+    display: block;
+
+    &_area{
+        width: 580px;
+        height: 680px;
+        border: 1px solid #ebebeb;
+        margin: {
+            top: 100px;
+            left: auto;
+            right: auto;
+        }
+        padding: {
+            top: 50px;
+            left: auto;
+            right: auto;
+        }
+    }
+
+    &_input_area{
+        
+    }
+}
+
+.form_id{
+    &_outter{
+        position: relative;
+        width: 400px;
+        margin: {
+            left: auto;
+            right: auto;
+            bottom: 30px;
+        }
+    }
+
+    &_inner{
+        width: 400px;
+        height: 56px;
+
+        border: {
+            top: none;
+            left: none;
+            right: none;
+            bottom: 1px solid #ebebeb;
+        }
+
+        font: {
+            size: 16px;
+        }
+    }
+
+    &_alert{
+        position: absolute;
+        left: 0.5rem;
+        bottom: 0.25rem;
+
+        display: none;
+
+        font: {
+            size: 10px;
+        }
+    }
+}
+
+.form_pw{
+    &_outter{
+        position: relative;
+        width: 400px;
+        margin: {
+            left: auto;
+            right: auto;
+            bottom: 30px;
+        }
+    }
+
+    &_inner{
+        width: 400px;
+        height: 56px;
+
+        border: {
+            top: none;
+            left: none;
+            right: none;
+            bottom: 1px solid #ebebeb;
+        }
+
+        font: {
+            size: 16px;
+        }
+    }
+
+    &_alert{
+        position: absolute;
+        left: 0.5rem;
+        bottom: 0.25rem;
+
+        display: none;
+
+        font: {
+            size: 10px;
+        }
+    }
+}
