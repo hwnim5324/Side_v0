@@ -6,6 +6,7 @@ import {
     Routes,
     Route,
 } from "react-router-dom";
+import { Reset } from 'styled-reset';
 
 import Main from './pages/Main';
 import SignIn from './pages/SignIn';
@@ -13,6 +14,7 @@ import Layout from './components/Layout';
 
 render(
   <BrowserRouter>
+  <Reset />
     <Layout>
       <Routes>
         <Route path='/' element={<Main />} />
