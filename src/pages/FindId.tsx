@@ -8,39 +8,43 @@ const FindId = () => {
             <div className='signin_area'>
                 <h1 className='blind'>로그인</h1>
                 <div className='signin_input_area'>
-                    <GetText inputType='text' />
-                    <GetText inputType='password' />
+                    <InputBoxComponent inputType='text' />
+                    <InputBoxComponent inputType='password' />
                 </div>
                 <div className='find_users_area'>
-                    <FindUsers />
-                    <BtnSignUp />
+                    <FindUsersComponent />
+                    <BtnSignUpComponent />
                 </div>
-                <SubmitBtn />
+                <SubmitBtnComponent />
                 <div className='social_signin_area'>
-                    <SignInByOauth />
+                    <SignInByOauthComponent />
                 </div>
             </div>
         </div>
     );
 }
 
-const GetText = ( props : { inputType : string }) => {
-    let divClass = (props.inputType === 'text') ? 'form_id_outter' : 'form_pw_outter';
-    let inputClass = (props.inputType === 'text') ? 'form_id_inner' : 'form_pw_inner';
-    let spanClass = (props.inputType === 'text') ? 'form_id_alert' : 'form_pw_alert';
+interface InputBoxProps{
+    inputType: string;
+}
 
-    let phText = (props.inputType === 'text') ? '아이디' : '비밀번호';
-    let spanText = (props.inputType === 'text') ? '아이디를 입력해주세요' : '비밀번호를 입력해주세요';
+const InputBoxComponent = ( {inputType}: InputBoxProps ): JSX.Element => {
+    const DIV_CLASSNAME = (inputType === 'text') ? 'form_id_outter' : 'form_pw_outter';
+    const INPUT_CLASSNAME = (inputType === 'text') ? 'form_id_inner' : 'form_pw_inner';
+    const SPAN_CLASSNAME = (inputType === 'text') ? 'form_id_alert' : 'form_pw_alert';
+
+    const PLACEHOLDER_TEXT_CLASSNAME = (inputType === 'text') ? '아이디' : '비밀번호';
+    const SPAN_TEXT_CLASSNAME = (inputType === 'text') ? '아이디를 입력해주세요' : '비밀번호를 입력해주세요';
 
     return(
-        <div className={divClass}>
-            <input type={props.inputType} placeholder={phText} className={inputClass}/>
-            <span className={spanClass}>{spanText}</span>
+        <div className={DIV_CLASSNAME}>
+            <input type={inputType} placeholder={PLACEHOLDER_TEXT_CLASSNAME} className={INPUT_CLASSNAME}/>
+            <span className={SPAN_CLASSNAME}>{SPAN_TEXT_CLASSNAME}</span>
         </div>
     );
 }
 
-const SubmitBtn = () => {
+const SubmitBtnComponent = (): JSX.Element => {
     return(
         <div className='btn_signin'>
             <a href='/' className='btn_signin_submit'>
@@ -50,12 +54,9 @@ const SubmitBtn = () => {
     );
 }
 
-const FindUsers = () => {
+const FindUsersComponent = (): JSX.Element => {
     return(
         <ul className='find_users'>
-            <li className='find_users_id'>
-                <Link to='/'>아이디 찾기</Link>
-            </li>
             <li className='find_users_pw'>
                 <Link to='/'>비밀번호 찾기</Link>
             </li>
@@ -63,7 +64,7 @@ const FindUsers = () => {
     );
 }
 
-const BtnSignUp = () => {
+const BtnSignUpComponent = (): JSX.Element => {
     return(
         <span>
             <Link to='/' className='btn_signup'>회원가입</Link>
@@ -71,7 +72,7 @@ const BtnSignUp = () => {
     );
 }
 
-const SignInByOauth = () => {
+const SignInByOauthComponent = (): JSX.Element => {
     return(
         <ul>
             <li>

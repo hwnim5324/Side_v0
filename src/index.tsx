@@ -8,9 +8,10 @@ import {
 } from "react-router-dom";
 import { Reset } from 'styled-reset';
 
+import Layout from './components/Layout';
 import Main from './pages/Main';
 import SignIn from './pages/SignIn';
-import Layout from './components/Layout';
+import FindId from './pages/FindId';
 
 render(
   <BrowserRouter>
@@ -19,6 +20,7 @@ render(
       <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/SignIn' element={<SignIn />} />
+        <Route path='/FindId' element={<FindId />} />
       </Routes>
     </Layout>
   </BrowserRouter>,
