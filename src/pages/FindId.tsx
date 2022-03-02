@@ -4,21 +4,18 @@ import '../styles/FindId.scss';
 
 const FindId = () => {
     return(
-        <div className='signin'>
-            <div className='signin_area'>
-                <h1 className='blind'>로그인</h1>
-                <div className='signin_input_area'>
+        <div className='findid'>
+            <div className='findid_area'>
+                <h1 className='blind'>아이디 찾기</h1>
+                <div className='findid_input_area'>
                     <InputBoxComponent inputType='text' />
-                    <InputBoxComponent inputType='password' />
+                    <InputBoxComponent inputType='tel' />
                 </div>
                 <div className='find_users_area'>
                     <FindUsersComponent />
                     <BtnSignUpComponent />
                 </div>
                 <SubmitBtnComponent />
-                <div className='social_signin_area'>
-                    <SignInByOauthComponent />
-                </div>
             </div>
         </div>
     );
@@ -29,12 +26,12 @@ interface InputBoxProps{
 }
 
 const InputBoxComponent = ( {inputType}: InputBoxProps ): JSX.Element => {
-    const DIV_CLASSNAME = (inputType === 'text') ? 'form_id_outter' : 'form_pw_outter';
-    const INPUT_CLASSNAME = (inputType === 'text') ? 'form_id_inner' : 'form_pw_inner';
-    const SPAN_CLASSNAME = (inputType === 'text') ? 'form_id_alert' : 'form_pw_alert';
+    const DIV_CLASSNAME = (inputType === 'text') ? 'form_name_outter' : 'form_phone_outter';
+    const INPUT_CLASSNAME = (inputType === 'text') ? 'form_name_inner' : 'form_phone_inner';
+    const SPAN_CLASSNAME = (inputType === 'text') ? 'form_name_alert' : 'form_phone_alert';
 
-    const PLACEHOLDER_TEXT_CLASSNAME = (inputType === 'text') ? '아이디' : '비밀번호';
-    const SPAN_TEXT_CLASSNAME = (inputType === 'text') ? '아이디를 입력해주세요' : '비밀번호를 입력해주세요';
+    const PLACEHOLDER_TEXT_CLASSNAME = (inputType === 'text') ? '이름' : '전화번호';
+    const SPAN_TEXT_CLASSNAME = (inputType === 'text') ? '이름을 입력해주세요' : '전화번호를 입력해주세요';
 
     return(
         <div className={DIV_CLASSNAME}>
@@ -46,9 +43,9 @@ const InputBoxComponent = ( {inputType}: InputBoxProps ): JSX.Element => {
 
 const SubmitBtnComponent = (): JSX.Element => {
     return(
-        <div className='btn_signin'>
-            <a href='/' className='btn_signin_submit'>
-                <span className='btn_signin_text'>로그인</span>
+        <div className='btn_findid'>
+            <a href='/' className='btn_findid_submit'>
+                <span className='btn_findid_text'>아이디 찾기</span>
             </a>
         </div>
     );
@@ -69,22 +66,6 @@ const BtnSignUpComponent = (): JSX.Element => {
         <span>
             <Link to='/' className='btn_signup'>회원가입</Link>
         </span>
-    );
-}
-
-const SignInByOauthComponent = (): JSX.Element => {
-    return(
-        <ul>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-            <li>
-
-            </li>
-        </ul>
     );
 }
 

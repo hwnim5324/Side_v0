@@ -2,7 +2,7 @@
     display: none;
 }
 
-.signin{
+.findid{
     display: block;
 
     &_area{
@@ -20,13 +20,9 @@
             right: auto;
         }
     }
-
-    &_input_area{
-        
-    }
 }
 
-.form_id{
+.form_name{
     &_outter{
         position: relative;
         width: 400px;
@@ -71,7 +67,7 @@
     }
 }
 
-.form_pw{
+.form_phone{
     &_outter{
         position: relative;
         width: 400px;
@@ -116,7 +112,7 @@
     }
 }
 
-.btn_signin{
+.btn_findid{
     &_submit{
         display: block;
         margin: auto;
