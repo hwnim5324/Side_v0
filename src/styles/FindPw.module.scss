@@ -1,0 +1,186 @@
+.blind{
+    display: none;
+}
+
+.findpw{
+    display: block;
+
+    &_area{
+        width: 580px;
+        height: 380px;
+        border: 1px solid #ebebeb;
+        margin: {
+            top: 160px;
+            left: auto;
+            right: auto;
+        }
+        padding: {
+            top: 50px;
+            left: auto;
+            right: auto;
+        }
+    }
+}
+
+.form_id{
+    &_outter{
+        position: relative;
+        width: 400px;
+        margin: {
+            left: auto;
+            right: auto;
+            bottom: 30px;
+        }
+    }
+
+    &_inner{
+        width: 400px;
+        height: 56px;
+
+        border: {
+            top: none;
+            left: none;
+            right: none;
+            bottom: 1px solid #ebebeb;
+        }
+
+        font: {
+            size: 16px;
+        }
+
+        &::placeholder{
+            font-weight: 600;
+            color: #c4c4c4;
+        }
+    }
+
+    &_alert{
+        position: absolute;
+        left: 0.5rem;
+        bottom: 0.25rem;
+
+        display: none;
+
+        font: {
+            size: 10px;
+        }
+    }
+}
+
+.form_phone{
+    &_outter{
+        position: relative;
+        width: 400px;
+        margin: {
+            left: auto;
+            right: auto;
+            bottom: 25px;
+        }
+    }
+
+    &_inner{
+        width: 400px;
+        height: 56px;
+
+        border: {
+            top: none;
+            left: none;
+            right: none;
+            bottom: 1px solid #ebebeb;
+        }
+
+        font: {
+            size: 16px;
+        }
+
+        &::placeholder{
+            font-weight: 600;
+            color: #c4c4c4;
+        }
+    }
+
+    &_alert{
+        position: absolute;
+        left: 0.5rem;
+        bottom: 0.25rem;
+
+        display: none;
+
+        font: {
+            size: 10px;
+        }
+    }
+}
+
+.btn_findpw{
+    &_submit{
+        display: block;
+        margin: auto;
+
+        width: 400px;
+        height: 56px;
+
+        background-color: #3f3fff;
+
+        cursor: pointer;
+    }
+
+    &_text{
+        display: block;
+        text-align: center;
+
+        line-height: 56px;
+        font-size: 18px;
+        font-weight: bold;
+
+        color: #ffffff;
+    }
+}
+
+.find_users{
+    display: inline-flex;
+
+    li::after{
+        content: '|';
+        float: right;
+        margin-left: 14px;
+        color: #c4c4c4;
+    }
+
+    li:last-child::after{
+        content: '';
+    }
+
+    &_area{ 
+        position: relative;
+        margin: {
+            left: auto;
+            right: auto;
+            bottom: 25px;
+        }
+        width: 400px;
+    }
+
+    &_id{
+        a{
+            font: {
+                size: 14px;
+                weight: 600;
+            }
+
+            color: #929292;
+        }
+    }
+}
+
+.btn_signup{
+    position: absolute;
+    right: 0;
+
+    font: {
+        size: 14px;
+        weight: 600;
+    }
+
+    color: #181818;
+}
