@@ -1,10 +1,10 @@
 import React from 'react';
-import '../styles/Main.scss';
+import styles from '../styles/Main.module.scss';
 
 const Main = () => {
   return(
     <div>
-      <span className='txt'>Main</span>
+      <span className={styles.txt}>Main</span>
     </div>
   );
 }
